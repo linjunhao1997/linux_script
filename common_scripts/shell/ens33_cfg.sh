@@ -3,9 +3,9 @@
 FILE_PATH="/etc/sysconfig/network-scripts/ifcfg-ens33"
 
 init() {
-	NUM=`sed -n "/$1/=" $FILE_PATH`
-    echo "please input $1:"
-    read VAL
+    NUM=`sed -n "/$1/=" $FILE_PATH`
+    stty erase ^H
+    read -p "please input $1:" VAL
     if [ "$NUM" == "" ] 
 	then
 		sed -i "\$a\\$1=$VAL" $FILE_PATH
