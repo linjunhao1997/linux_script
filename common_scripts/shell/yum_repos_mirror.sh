@@ -12,6 +12,6 @@ yum makecache
 
 rpm -e epel-release
 
-yum -yinstall epel-release
+yum -y install epel-release
 
 wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
