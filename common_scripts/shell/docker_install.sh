@@ -15,6 +15,8 @@ systemctl start docker
 
 cat > /etc/docker/daemon.json << EOF
 {
+  "exec-opts": ["native.cgroupdriver=systemd"],
+
   "registry-mirrors": [
     "https://kfwkfulq.mirror.aliyuncs.com",
     "https://2lqq34jg.mirror.aliyuncs.com",
